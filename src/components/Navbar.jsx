@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
 //import {v4 as uuidv4} from 'uuid';
+import {FaYoutube,FaSearch} from 'react-icons/fa';
 
 export default function Navbar() {
   const [text, setText] = useState("");
@@ -15,7 +16,7 @@ export default function Navbar() {
   };
   return (
     <nav>
-      <Link to="/">Youtube</Link>
+      <Link to="/"><FaYoutube color="red"/>Youtube</Link>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -23,7 +24,7 @@ export default function Navbar() {
           onChange={handleChange}
           placeholder="Search..."
         />
-        <button >Add</button>
+        <button ><FaSearch/></button>
       </form>
     </nav>
   );
